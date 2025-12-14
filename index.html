@@ -1,21 +1,247 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Nexus Website</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Corporate Business Website</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
 </head>
 <body>
 
-<nav>
-  <a href="index.html">Home</a>
-  <a href="about.html">About</a>
-  <a href="services.html">Services</a>
-  <a href="contact.html">Contact</a>
-  <a href="admin-login.html">Admin</a>
-</nav>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">
+  <img src="images/logo.png.png" alt="Nexus InfraBuild India LLP Logo">
+</div>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#login" class="btn">Login</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<h1>Welcome to Nexus InfraBuild</h1>
-<p>Professional Services | Trusted Solutions</p>
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <h1>Building <span>Premium</span> Corporate Solutions</h1>
+    <p>We Deliver Trusted, Bold & Future‑Ready Business ervices.</p>
+    <a href="#contact" class="btn">Get Started</a>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="about-section">
+  <div class="about-container">
+    
+  
+    <div class="about-text">
+      <h2>About <span></h2>
+      <p>
+        Nexus InfraBuild India LLP is a future-ready infrastructure and
+        corporate solutions company committed to quality, innovation,
+        and trust.Our expertise spans the infrastructure, corporate, 
+        IT, and financial sectors, and our mission is to help clients 
+        achieve their projects and business goals efficiently, cost-effectively,
+         and professionally. Our dedicated team consists of experienced professionals who design customized solutions for every client, ensuring quality, reliability, and timely delivery. Whether your business is small or large, we prioritize excellence and innovation in every project.
+      </p>
+
+      <ul>
+        <li>✔ Trusted & Transparent Services</li>
+        <li>✔ Professional Corporate Team</li>
+        <li>✔ Quality-Driven Infrastructure Solutions</li>
+      </ul>
+
+      <a href="#contact" class="btn">Contact Us</a>
+    </div>
+
+  </div>
+</section>
+
+  <section id="services" class="section dark">
+  <h2>Our Services</h2>
+
+  <div class="cards">
+
+    <div class="card" onclick="showService('consultancy')">
+      <i class="fa-solid fa-user-tie service-icon"></i>
+      <h4>Consultancy Services</h4>
+    </div>
+
+    <div class="card" onclick="showService('infrastructure')">
+      <i class="fa-solid fa-helmet-safety service-icon"></i>
+      <h4>Infrastructure Projects</h4>
+    </div>
+
+    <div class="card" onclick="showService('corporate')">
+      <i class="fa-solid fa-building service-icon"></i>
+      <h4>Corporate Solutions</h4>
+    </div>
+
+  <div class="card" onclick="showService('IT solutions')">
+  <i class="fa-solid fa-laptop-code service-icon big-icon"></i>
+
+  <h4>IT Solutions</h4>
+</div>
+
+<div class="card" onclick="showService('Money Management')">
+  <i class="fa-solid fa-coins service-icon"></i>
+  <h4>Money Management</h4>
+</div>
+
+
+  </div>
+  <!-- details section same rahega -->
+</section>
+
+
+  <section id="projects" class="section projects-section">
+  <h2>Gallery / Projects</h2>
+
+  <div class="gallery">
+
+    <div class="project-box project1">
+      <span>InfraBuild</span>
+    </div>
+
+    <div class="project-box project2">
+      <span>IT Solutions</span>
+    </div>
+
+    <div class="project-box project3">
+      <span>Money Management</span>
+    </div>
+
+  </div>
+</section>
+
+
+  <!-- Contact -->
+  <section id="contact" class="section dark">
+
+  <h2>Contact Us</h2>
+
+  <form class="contact-form">
+
+  <input type="text" id="name" placeholder="Your Name" required>
+
+  <input type="email" id="email" placeholder="Your Email" required>
+
+  <textarea id="message" placeholder="Your Message" required></textarea>
+
+  <button type="button" class="btn" onclick="sendMessage()">
+  Send Message
+</button>
+
+
+</form>
+
+
+</section>
+
+
+  <!-- Login -->
+  <section id="login" class="section">
+    <h2>Login</h2>
+    <form class="login-form">
+      <input type="text" placeholder="Username" />
+      <input type="password" placeholder="Password" />
+      <button type="button" class="btn" onclick="goDashboard()">Login</button>
+
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+  <footer class="footer">
+  <div class="footer-content">
+    <img src="images/logo.png.png" alt="Nexus Logo" class="footer-logo">
+    <p>© 2025 Nexus InfraBuild India LLP. All Rights Reserved.</p>
+  </div>
+</footer>
+
+<script>
+function goDashboard() {
+  window.location.href = "dashboard.html";
+}
+</script>
+
+<script>
+function sendMessage() {
+  let name = document.getElementById("name").value.trim();
+  let email = document.getElementById("email").value.trim();
+  let message = document.getElementById("message").value.trim();
+
+  if (name === "" || email === "" || message === "") {
+    alert("Please fill all details");
+    return;
+  }
+
+  /* ================= EMAIL ================= */
+  let companyEmail = "nexusinfrabuild@gmail.com"; // apna email
+  let subject = "New Website Enquiry";
+  let body =
+    "Name: " + name + "%0D%0A" +
+    "Email: " + email + "%0D%0A" +
+    "Message: " + message;
+
+  window.location.href =
+    "mailto:" + companyEmail +
+    "?subject=" + subject +
+    "&body=" + body;
+
+  /* ================= WHATSAPP ================= */
+  let phone = "918866873503"; // +91 ke sath
+  let waText =
+    "New Website Enquiry%0A%0A" +
+    "Name: " + name + "%0A" +
+    "Email: " + email + "%0A" +
+    "Message: " + message;
+
+  setTimeout(function () {
+    window.open(
+      "https://wa.me/" + phone + "?text=" + waText,
+      "_blank"
+    );
+  }, 1500);
+}
+</script>
+
+<script>
+(function(){
+  emailjs.init("cEWdXuQfejSw_AKqi"); // 👈 apni PUBLIC KEY
+})();
+
+function sendMessage() {
+  let name = document.getElementById("name").value;
+  let email = document.getElementById("email").value;
+  let message = document.getElementById("message").value;
+
+  if(name==="" || email==="" || message===""){
+    alert("Please fill all details");
+    return;
+  }
+
+  emailjs.send("service_dfgxn43","template_0wkycmh",{
+    name: name,
+    email: email,
+    message: message
+  })
+  .then(function(){
+    alert("✅ Message sent successfully!");
+    document.querySelector(".contact-form").reset();
+  }, function(error){
+    alert("❌ Failed to send message");
+    console.log(error);
+  });
+}
+</script>
 
 </body>
 </html>
