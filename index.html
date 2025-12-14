@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Corporate Business Website</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">
+  <img src="images/logo.png.png" alt="Nexus InfraBuild India LLP Logo">
+</div>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#login" class="btn">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <h1>Building <span>Premium</span> Corporate Solutions</h1>
+    <p>We Deliver Trusted, Bold & Future‑Ready Business ervices.</p>
+    <a href="#contact" class="btn">Get Started</a>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="about-section">
+  <div class="about-container">
+    
+  
+    <div class="about-text">
+      <h2>About <span></h2>
+      <p>
+        Nexus InfraBuild India LLP is a future-ready infrastructure and
+        corporate solutions company committed to quality, innovation,
+        and trust.Our expertise spans the infrastructure, corporate, 
+        IT, and financial sectors, and our mission is to help clients 
+        achieve their projects and business goals efficiently, cost-effectively,
+         and professionally. Our dedicated team consists of experienced professionals who design customized solutions for every client, ensuring quality, reliability, and timely delivery. Whether your business is small or large, we prioritize excellence and innovation in every project.
+      </p>
+
+      <ul>
+        <li>✔ Trusted & Transparent Services</li>
+        <li>✔ Professional Corporate Team</li>
+        <li>✔ Quality-Driven Infrastructure Solutions</li>
+      </ul>
+
+      <a href="#contact" class="btn">Contact Us</a>
+    </div>
+
+  </div>
+</section>
+
+  <section id="services" class="section dark">
+  <h2>Our Services</h2>
+
+  <div class="cards">
+
+    <div class="card" onclick="showService('consultancy')">
+      <i class="fa-solid fa-user-tie service-icon"></i>
+      <h4>Consultancy Services</h4>
+    </div>
+
+    <div class="card" onclick="showService('infrastructure')">
+      <i class="fa-solid fa-helmet-safety service-icon"></i>
+      <h4>Infrastructure Projects</h4>
+    </div>
+
+    <div class="card" onclick="showService('corporate')">
+      <i class="fa-solid fa-building service-icon"></i>
+      <h4>Corporate Solutions</h4>
+    </div>
+
+  <div class="card" onclick="showService('IT solutions')">
+  <i class="fa-solid fa-laptop-code service-icon big-icon"></i>
+
+  <h4>IT Solutions</h4>
+</div>
+
+<div class="card" onclick="showService('Money Management')">
+  <i class="fa-solid fa-coins service-icon"></i>
+  <h4>Money Management</h4>
+</div>
+
+
+  </div>
+  <!-- details section same rahega -->
+</section>
+
+
+  <section id="projects" class="section projects-section">
+  <h2>Gallery / Projects</h2>
+
+  <div class="gallery">
+
+    <div class="project-box project1">
+      <span>Project 1</span>
+    </div>
+
+    <div class="project-box project2">
+      <span>Project 2</span>
+    </div>
+
+    <div class="project-box project3">
+      <span>Project 3</span>
+    </div>
+
+  </div>
+</section>
+
+
+  <!-- Contact -->
+  <section id="contact" class="section dark">
+    <h2>Contact Us</h2>
+    <form class="contact-form">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea placeholder="Your Message"></textarea>
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Login -->
+  <section id="login" class="section">
+    <h2>Login</h2>
+    <form class="login-form">
+      <input type="text" placeholder="Username" />
+      <input type="password" placeholder="Password" />
+      <button type="button" class="btn" onclick="goDashboard()">Login</button>
+
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+  <footer class="footer">
+  <div class="footer-content">
+    <img src="images/logo.png.png" alt="Nexus Logo" class="footer-logo">
+    <p>© 2025 Nexus InfraBuild India LLP. All Rights Reserved.</p>
+  </div>
+</footer>
+
+<script>
+function goDashboard() {
+  window.location.href = "dashboard.html";
+}
+</script>
+
+</body>
+</html>
